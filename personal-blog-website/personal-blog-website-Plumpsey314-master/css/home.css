@@ -1,0 +1,99 @@
+/*Main page heading */
+h1 {
+  color: #dc5;
+  font-size: 300%;
+  font-family: "Lucida Calligraphy", cursive;
+  border-top: #f52 double 6px;
+  border-bottom: #f52 double 6px;
+  text-align: center;
+}
+
+/*blog link style*/
+button {
+  border: 10px solid #f8f8f8;
+  text-decoration: none;
+  background-color: #f8f8f8;
+}
+
+h2 {
+  background-image: none;
+  line-height: normal;
+  font-size: 150%;
+  color: #000;
+  text-align: center;
+}
+
+body {
+  background-color: #eed;
+}
+
+/*Blog links */
+.container-grid {
+  padding-left: 60px;
+  padding-right: 60px;
+  display: grid;
+  grid-gap: 75px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.w3-card {
+  background-image: url(../images/leaf-background.jpg);
+  background-repeat: no-repeat;
+  box-shadow: 3px 3px 3px #999;
+  padding-left: 20px;
+  background-color: #fff;
+  width: auto;
+  height: 300px;
+}
+
+/*popular posts */
+.popular {
+  grid-area: nav;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+#english {
+  order: 2;
+  border: 2px solid #9a6;
+}
+
+#spanish {
+  order: 1;
+  border: 2px solid #9a6;
+}
+
+/*@media queryies*/
+@media(min-width:1000px) {
+  .container-grid {
+    padding-left: 60px;
+    padding-right: 60px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(6, auto) 30px;
+    grid-gap: 75px;
+    grid-template-areas:
+      "one two"
+      "three four"
+      "five six"
+      "seven eight"
+      "nine ten"
+      "eleven twelve"
+      "nav nav";
+  }
+
+  .w3-card {
+    width: auto;
+    height: 300px;
+  }
+
+  .popular {
+    grid-area: nav;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}

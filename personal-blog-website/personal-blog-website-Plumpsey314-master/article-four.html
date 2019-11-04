@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="css/blog.css">
+  </head>
+  <style>
+  .recipe{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 70px 300px 170px auto;
+    grid-template-areas:
+    "ttl ttl"
+    "img img"
+    "ing ing"
+    "pro pro";
+
+  }
+  #title{
+    grid-area: ttl;
+    border-bottom: none;
+    border-left: 3px solid #797;
+    border-right: 3px solid #797;
+    border-top: 3px solid #797;
+  }
+  #image{
+    grid-area: img;
+    border-bottom: none;
+    border-left: 3px solid #797;
+    border-right: 3px solid #797;
+    border-top: 3px solid #797;
+  }
+
+  #ingredients{
+    grid-area: ing;
+    border-left: 3px solid #797;
+    border-right: 3px solid #797;
+    border-top: 3px solid #797;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 4fr;
+    grid-template-areas:
+    "h wet"
+    "dry wet"
+  }
+  h3{
+    grid-area: h;
+  }
+  .dry{
+    grid-area: dry;
+  }
+  .wet{
+    grid-area: wet;
+  }
+  #procedure{
+    grid-area: pro;
+    border-bottom: 3px solid #797;
+    border-left: 3px solid #797;
+    border-right: 3px solid #797;
+    border-top: 3px solid #797;
+
+  }
+  img{
+    padding-left: 25%;
+    padding-top: 2%;
+    height: 90%;
+    width: auto;
+  }
+  /*media queries*/
+  @media (min-width: 820px) {
+
+  .container{
+    background-color: #cfe;
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-bottom: 70px;
+    padding-left: 20px;
+    padding-bottom: 50px;
+    box-shadow: 5px 5px 3px #608580;
+  }
+  h2{
+    font-size: 300%;
+  }
+  .recipe{
+    grid-template-areas:
+    "ttl ttl"
+    "ing img"
+    "ing pro"
+    "ing pro";
+
+  }
+
+  #ingredients{
+    border-bottom: 3px solid #797;
+    border-right: 0px;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas:
+    "h"
+    "dry"
+    "wet"
+  }
+  }
+
+  </style>
+  <body>
+    <div class="container">
+    <header>
+      <h2>Una Receta por pan de Plàntanas</h2>
+    </header>
+    <a href="index.html">Home</a>
+      <button>Subscribe</button>
+    <div class="recipe">
+      <div id="title"><strong>La Receta de pan de plàntanas es muy divertita y fàcil. Es una receta
+         de mi madre y se puede poner otras cosas en la pan de plàntanas tambièn</strong></div>
+      <div id="image"><img src="images/banana-bread.jpg" alt="banana bread"></div>
+      <div id="ingredients"><h3>Los Ingredients:</h3>
+
+      <ul class="dry">
+        <li>un poco de sal</li>
+        <li>harina</li>
+        <li>polvo para hornear</li>
+        <li>bicarbonato</li>
+        <li>cinimón</li>
+      </ul>
+      <ul class="wet">
+        <li>Plàntanas</li>
+        <li>azucar</li>
+        <li>huevos</li>
+        <li>vanilla</li>
+        <li>leche</li>
+        <li>tapatas chocolates (opcionàl)</li>
+        <li>matequila</li>
+      </ul>
+      </div>
+      <div id="procedure"><h3>El procedimiento:</h3>
+      <ol>
+        <li>Se pone la matequila en la sartèn</li>
+        <li>Hay que echer la harina, la sal, la cinimón, la bicarbonato, y la polvo para hornear en un bol.</li>
+        <li>Los bates</li>
+        <li>Tienes que pelar los plàntanas</li>
+        <li>Se echa la leche en un bol nuevo</li>
+        <li>Hay que poner los huevos, vanilla, azucar, y topotos chocolates si queires tambièn.</li>
+        <li>Bates las plàntanas y las pones en la bol col la leche</li>
+        <li>Tienes que mezcalar los dos bols y poner todos en la sartèn</li>
+        <li>Se cocina</li>
+      </ol></div>
+      </div>
+      <footer>
+        <h5>Readers Also liked</h5>
+        <div class="w3-card"><a href="article-one.html"><button>
+
+              <h1> Mi Fin de Semana En San Sebatian</h2>
+              <p>¡San Sebastian es la ciudad mas bonita en todo<br>
+                de España! Alguna vez me gustaría ir aya porque hay muchas <br>
+                cosas divertitas hacer.</p>
+
+            </button></a></div>
+          <div class="w3-card"><a href="article-seven.html"><button>
+                <h1> 100 dígitos de pi</h2>
+                <p> Solomente 100 dígitos de pi </p>
+              </button></a></div>
+      </footer>
+    </div>
+
+  </body>
+</html>
